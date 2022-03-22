@@ -71,7 +71,8 @@
     </style>
 
     <style name="dark_text">
-        <item name="android:textColor">#FF333333</item>
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:textColorHint">@color/dark_gray</item>
     </style>
 
     <style name="detail_label_text">
@@ -130,6 +131,7 @@
         <item name="windowActionBarOverlay">true</item>
         <item name="android:actionBarStyle">@style/DetailsActionBar</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">#ff202020</item>
     </style>
 
     <style name="btn_remove">
@@ -217,7 +219,9 @@
 
     <style name="AppTheme"
             parent="AppBaseTheme">
-        <item name="android:textColor">#FF333333</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#FFFFFF</item>
         <item name="colorPrimary">@color/primary</item>
         <item name="android:windowTitleStyle">@style/window_title_style</item>
     </style>

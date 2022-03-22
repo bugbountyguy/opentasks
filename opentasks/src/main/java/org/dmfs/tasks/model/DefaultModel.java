@@ -100,21 +100,21 @@ public class DefaultModel extends Model
 
         // status
         addField(new FieldDescriptor(context, R.id.task_field_status, R.string.task_status, TaskFieldAdapters.STATUS).setViewLayout(CHOICES_VIEW)
-                .setEditorLayout(CHOICES_EDIT).setChoices(aca).setIcon(R.drawable.ic_detail_status));
+                .setEditorLayout(CHOICES_EDIT).setChoices(aca).setIcon(R.drawable.ic_tab_priority));
 
         // location
         addField(new FieldDescriptor(context, R.id.task_field_location, R.string.task_location, TaskFieldAdapters.LOCATION).setViewLayout(LOCATION_VIEW)
-                .setEditorLayout(TEXT_EDIT).setIcon(R.drawable.ic_detail_location));
+                .setEditorLayout(TEXT_EDIT).setIcon(R.drawable.ic_detail_location_light));
 
         // description
         addField(new FieldDescriptor(context, R.id.task_field_checklist, R.string.task_description, TaskFieldAdapters.DESCRIPTION_CHECKLIST)
                 .setViewLayout(DESCRIPTION_VIEW)
                 .setEditorLayout(DESCRIPTION_EDIT)
-                .setIcon(R.drawable.ic_detail_description));
+                .setIcon(R.drawable.ic_detail_description_light));
 
         // start
         addField(new FieldDescriptor(context, R.id.task_field_dtstart, R.string.task_start, TaskFieldAdapters.DTSTART).setViewLayout(TIME_VIEW)
-                .setEditorLayout(TIME_EDIT).setIcon(R.drawable.ic_detail_start));
+                .setEditorLayout(TIME_EDIT).setIcon(R.drawable.ic_tab_start));
 
         // due
         addField(new FieldDescriptor(context, R.id.task_field_due, R.string.task_due, TaskFieldAdapters.DUE).setEditorLayout(TIME_EDIT).setIcon(
@@ -138,7 +138,7 @@ public class DefaultModel extends Model
 
         // percent complete
         addField(new FieldDescriptor(context, R.id.task_field_percent_complete, R.string.task_percent_complete, TaskFieldAdapters.PERCENT_COMPLETE)
-                .setViewLayout(PROGRESS_VIEW).setEditorLayout(PROGRESS_EDIT).setIcon(R.drawable.ic_detail_progress));
+                .setViewLayout(PROGRESS_VIEW).setEditorLayout(PROGRESS_EDIT).setIcon(R.drawable.ic_tab_progress));
 
         ArrayChoicesAdapter aca2 = new ArrayChoicesAdapter();
         aca2.addChoice(null, context.getString(R.string.priority_undefined), null);
@@ -155,7 +155,7 @@ public class DefaultModel extends Model
 
         // priority
         addField(new FieldDescriptor(context, R.id.task_field_priority, R.string.task_priority, TaskFieldAdapters.PRIORITY).setViewLayout(CHOICES_VIEW)
-                .setEditorLayout(CHOICES_EDIT).setChoices(aca2).setIcon(R.drawable.ic_detail_priority));
+                .setEditorLayout(CHOICES_EDIT).setChoices(aca2).setIcon(R.drawable.ic_tab_priority));
 
         ArrayChoicesAdapter aca3 = new ArrayChoicesAdapter();
         aca3.addChoice(null, context.getString(R.string.classification_not_specified), null);
@@ -165,15 +165,15 @@ public class DefaultModel extends Model
 
         // privacy
         addField(new FieldDescriptor(context, R.id.task_field_classification, R.string.task_classification, TaskFieldAdapters.CLASSIFICATION)
-                .setViewLayout(CHOICES_VIEW).setEditorLayout(CHOICES_EDIT).setChoices(aca3).setIcon(R.drawable.ic_detail_visibility));
+                .setViewLayout(CHOICES_VIEW).setEditorLayout(CHOICES_EDIT).setChoices(aca3).setIcon(R.drawable.ic_detail_visibility_light));
 
         // url
         addField(new FieldDescriptor(context, R.id.task_field_url, R.string.task_url, TaskFieldAdapters.URL).setViewLayout(URL_VIEW).setEditorLayout(URL_EDIT)
-                .setIcon(R.drawable.ic_detail_url));
+                .setIcon(R.drawable.ic_detail_url_light));
 
         // task list name
         addField(new FieldDescriptor(context, R.id.task_field_list_and_account_name, R.string.task_list, null, TaskFieldAdapters.LIST_AND_ACCOUNT_NAME)
-                .setViewLayout(TEXT_VIEW_NO_LINKS).setIcon(R.drawable.ic_detail_list));
+                .setViewLayout(TEXT_VIEW_NO_LINKS).setIcon(R.drawable.ic_tab_list));
 
         setAllowRecurrence(false);
         setAllowExceptions(false);

@@ -16,6 +16,7 @@
 
 package org.dmfs.tasks.widget;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
@@ -198,7 +199,8 @@ public final class TimeFieldEditor extends AbstractFieldEditor implements OnDate
             }
             else
             {
-                dialog = new TimePickerDialog(getContext(), TimeFieldEditor.this, mDateTime.hour, mDateTime.minute, mIs24hour);
+                dialog = new TimePickerDialog(getContext(), AlertDialog.THEME_HOLO_DARK, TimeFieldEditor.this, mDateTime.hour, mDateTime.minute, mIs24hour);
+
             }
             dialog.show();
         }

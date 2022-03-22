@@ -28,6 +28,7 @@ android {
         versionCode gitCommitNo('refs/remotes/origin/master') * 99 + gitCommitNo('HEAD') + Integer.parseInt(VERSION_OVERRIDE)
         versionName version
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
     }
     if (project.hasProperty("DMFS_RELEASE_KEYSTORE")) {
         signingConfigs {

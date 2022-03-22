@@ -21,6 +21,7 @@
             android:drawableStart="@drawable/ic_list_24px"
             android:drawablePadding="8dp"
             android:focusable="true"
+            android:textColor="@color/dark_gray"
             android:gravity="center_vertical"
             android:padding="8dp"
             android:text="@string/opentasks_show_tick_box" />
@@ -38,6 +39,7 @@
             android:focusable="true"
             android:gravity="center_vertical"
             android:padding="8dp"
+            android:textColor="@color/dark_gray"
             android:text="@string/opentasks_delete_item" />
 
     <!-- TODO: add buttons "move to top" and "move to bottom" -->

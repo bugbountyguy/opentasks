@@ -38,6 +38,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.dmfs.android.bolts.color.elementary.ValueColor;
@@ -726,7 +727,13 @@ public class EditTaskFragment extends SupportFragment implements LoaderManager.L
                 mTaskUri = mValues.persist(activity);
 
                 activity.setResult(Activity.RESULT_OK, new Intent().setData(mTaskUri).putExtra(KEY_NEW_TASK, isNewTask));
-                Toast.makeText(activity, R.string.activity_edit_task_task_saved, Toast.LENGTH_SHORT).show();
+                Toast toast = Toast.makeText(activity, R.string.activity_edit_task_task_saved, Toast.LENGTH_SHORT);
+                View view = toast.getView();
+                view.setBackgroundResource(R.drawable.transparent);
+                TextView text = view.findViewById(android.R.id.message);
+                text.setTextColor(getResources().getColor(R.color.dark_gray));
+
+                toast.show();
                 activity.finish();
                 if (isNewTask)
                 {
@@ -754,7 +761,13 @@ public class EditTaskFragment extends SupportFragment implements LoaderManager.L
             else
             {
                 activity.setResult(Activity.RESULT_CANCELED);
-                Toast.makeText(activity, R.string.activity_edit_task_empty_task_not_saved, Toast.LENGTH_SHORT).show();
+                Toast toast = Toast.makeText(activity, R.string.activity_edit_task_empty_task_not_saved, Toast.LENGTH_SHORT);
+                View view = toast.getView();
+                view.setBackgroundResource(R.drawable.transparent);
+                TextView text = view.findViewById(android.R.id.message);
+                text.setTextColor(getResources().getColor(R.color.dark_gray));
+
+                toast.show();
                 activity.finish();
             }
         }

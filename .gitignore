@@ -38,4 +38,4 @@ local.properties
 .idea/gradle.xml
 .idea/caches/
 *.iml
-
+.idea/

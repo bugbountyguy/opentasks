@@ -9,6 +9,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:layout_gravity="center_vertical"
+            android:backgroundTint="#1a1a1a"
             android:orientation="horizontal">
 
         <Button
@@ -17,13 +18,17 @@
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
-                android:gravity="center|left"/>
+                android:textColor="@color/light_gray"
+                android:textColorHint="@color/dark_gray"
+                android:gravity="center|left" />
 
         <Button
                 android:id="@+id/task_time_picker"
                 style="@style/TextAppearance.EditTask_SpinnerButton"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:textColor="@color/light_gray"
+                android:textColorHint="@color/dark_gray"
                 android:layout_weight="4"/>
 
         <ImageButton
